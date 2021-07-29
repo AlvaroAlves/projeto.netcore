@@ -1,3 +1,6 @@
 {
-
+  "ConnectionStrings": {
+    "SqlServerConnection": "",
+    "MySqlConnection": "Server=localhost;Database=ECommerce;Uid=root;Pwd=root;"
+  }
 }
