@@ -45,6 +45,8 @@ namespace AngularDotnet.Repositorio.Config
                 .Property(p => p.NumeroEndereco)
                 .IsRequired()
                 .HasMaxLength(10);
+
+            builder.HasOne(p => p.Usuario);
         }
     }
 }

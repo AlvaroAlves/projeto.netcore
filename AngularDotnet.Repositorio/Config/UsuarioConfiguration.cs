@@ -34,7 +34,10 @@ namespace AngularDotnet.Repositorio.Config
                 .IsRequired()
                 .HasMaxLength(50);
 
-            //builder.Property(u => u.Pedidos)
+            //Mapeamento 1 para muitos
+            builder
+                .HasMany(u => u.Pedidos)
+                .WithOne(p => p.Usuario);
         }
     }
 }
