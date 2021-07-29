@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularDotnet.Dominio", "AngularDotnet.Dominio\AngularDotnet.Dominio.csproj", "{57667E0A-2411-498A-93B0-0B2FD06C0319}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularDotnet.Dominio", "AngularDotnet.Dominio\AngularDotnet.Dominio.csproj", "{57667E0A-2411-498A-93B0-0B2FD06C0319}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularDotnet.Repositorio", "AngularDotnet.Repositorio\AngularDotnet.Repositorio.csproj", "{8B2B9FA3-2314-4361-86CA-F11254A42C9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularDotnet.Repositorio", "AngularDotnet.Repositorio\AngularDotnet.Repositorio.csproj", "{8B2B9FA3-2314-4361-86CA-F11254A42C9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularDotnet.Web", "AngularDotnet.Web\AngularDotnet.Web.csproj", "{B73BB83C-9D9E-4508-B7F4-929F548C7F6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularDotnet.Web", "AngularDotnet.Web\AngularDotnet.Web.csproj", "{B73BB83C-9D9E-4508-B7F4-929F548C7F6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{57667E0A-2411-498A-93B0-0B2FD06C0319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -58,5 +55,11 @@ Global
 		{B73BB83C-9D9E-4508-B7F4-929F548C7F6C}.Release|x64.Build.0 = Release|Any CPU
 		{B73BB83C-9D9E-4508-B7F4-929F548C7F6C}.Release|x86.ActiveCfg = Release|Any CPU
 		{B73BB83C-9D9E-4508-B7F4-929F548C7F6C}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A84A019-8AB8-428C-9C70-80CF93087049}
 	EndGlobalSection
 EndGlobal
