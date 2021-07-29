@@ -46,7 +46,9 @@ namespace AngularDotnet.Repositorio.Config
                 .IsRequired()
                 .HasMaxLength(10);
 
-            builder.HasOne(p => p.Usuario);
+            builder.HasOne(p => p.FormaPagamento);
+
+            builder.HasMany(p => p.ItensPedido);
         }
     }
 }
