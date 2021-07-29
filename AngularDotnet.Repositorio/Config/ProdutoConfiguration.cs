@@ -11,7 +11,21 @@ namespace AngularDotnet.Repositorio.Config
     {
         public void Configure(EntityTypeBuilder<Produto> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(u => u.Id);
+
+            builder
+                .Property(u => u.Nome)
+                .HasMaxLength(50)
+                .IsRequired();
+
+            builder
+                .Property(u => u.Descricao)
+                .HasMaxLength(400)
+                .IsRequired();
+
+            builder
+                .Property(u => u.Preco)
+                .IsRequired();
         }
     }
 }

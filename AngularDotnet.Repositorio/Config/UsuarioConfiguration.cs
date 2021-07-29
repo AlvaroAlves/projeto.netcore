@@ -11,7 +11,30 @@ namespace AngularDotnet.Repositorio.Config
     {
         public void Configure(EntityTypeBuilder<Usuario> builder)
         {
-            throw new NotImplementedException();
+            // referenciar o builder
+            builder.HasKey(u => u.Id);
+            
+            builder
+                .Property(u => u.Email)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            builder
+                .Property(u => u.Nome)
+                .IsRequired()
+                .HasMaxLength(50);
+            
+            builder
+                .Property(u => u.Senha)
+                .IsRequired()
+                .HasMaxLength(500);
+            
+            builder
+                .Property(u => u.Sobrenome)
+                .IsRequired()
+                .HasMaxLength(50);
+
+            //builder.Property(u => u.Pedidos)
         }
     }
 }
