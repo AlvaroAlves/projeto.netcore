@@ -12,7 +12,10 @@ namespace AngularDotnet.Dominio.Entidades
 
         public override void Validate()
         {
-            throw new NotImplementedException();
+            if (ProdutoId == 0)
+                AdicionarMensagemCritica("Não foi identificada a referência do produto");
+            if (Quantidade == 0)
+                AdicionarMensagemCritica("Quantidade de produto não informada");
         }
     }
 }

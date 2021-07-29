@@ -13,7 +13,10 @@ namespace AngularDotnet.Dominio.Entidades
 
         public override void Validate()
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(Nome))
+                AdicionarMensagemCritica("Nome de produto não informado");
+            if (Preco <= 0)
+                AdicionarMensagemCritica("O preço precisa ser informado");
         }
     }
 }

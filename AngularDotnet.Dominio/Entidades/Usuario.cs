@@ -18,7 +18,11 @@ namespace AngularDotnet.Dominio.Entidades
 
         public override void Validate()
         {
-            throw new System.NotImplementedException();
+            if (string.IsNullOrEmpty(Email))
+                AdicionarMensagemCritica("Email não informado!");
+            if (string.IsNullOrEmpty(Senha))
+                AdicionarMensagemCritica("Senha não informada!");
+
         }
     }
 }
