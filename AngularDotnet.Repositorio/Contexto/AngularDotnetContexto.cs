@@ -1,5 +1,6 @@
 ﻿using AngularDotnet.Dominio.Entidades;
 using AngularDotnet.Dominio.ObjetoDeValor;
+using AngularDotnet.Repositorio.Config;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,18 @@ namespace AngularDotnet.Repositorio.Contexto
         public AngularDotnetContexto(DbContextOptions options) : base(options)
         {
 
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //Referenciar as classes de mapeamento
+            modelBuilder.ApplyConfiguration(new UsuarioConfiguration());
+            modelBuilder.ApplyConfiguration(new ProdutoConfiguration());
+            modelBuilder.ApplyConfiguration(new PedidoConfiguration());
+            modelBuilder.ApplyConfiguration(new ItemPedidoConfiguration());
+            modelBuilder.ApplyConfiguration(new FormaPagamentoConfiguration());
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
