@@ -14,5 +14,10 @@ namespace AngularDotnet.Repositorio.Contexto
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<ItemPedido> ItensPedidos { get; set; }
         public DbSet<FormaPagamento> FormaPagamento { get; set; }
+     
+        public AngularDotnetContexto(DbContextOptions options) : base(options)
+        {
+
+        }
     }
 }
