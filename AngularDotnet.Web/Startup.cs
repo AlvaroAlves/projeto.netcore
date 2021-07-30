@@ -1,4 +1,6 @@
+using AngularDotnet.Dominio.Contratos;
 using AngularDotnet.Repositorio.Contexto;
+using AngularDotnet.Repositorio.Repositorios;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -34,6 +36,9 @@ namespace AngularDotnet.Web
                             connectionString, m => m.MigrationsAssembly("AngularDotnet.Repositorio")
                         )
                     );
+            //injeção de dependencia
+            services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
