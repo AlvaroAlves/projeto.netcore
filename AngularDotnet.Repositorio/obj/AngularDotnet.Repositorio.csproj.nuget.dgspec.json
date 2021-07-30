@@ -4,14 +4,14 @@
     "C:\\Users\\usuario\\Desktop\\ProjetoAngular\\AngularDotnet.Repositorio\\AngularDotnet.Repositorio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\usuario\\Desktop\\ProjetoAngular\\AngularDotnet.Repositorio\\AngularDotnet.Repositorio.csproj": {
+    "C:\\Users\\usuario\\Desktop\\ProjetoAngular\\AngularDotnet.Dominio\\AngularDotnet.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\usuario\\Desktop\\ProjetoAngular\\AngularDotnet.Repositorio\\AngularDotnet.Repositorio.csproj",
-        "projectName": "AngularDotnet.Repositorio",
-        "projectPath": "C:\\Users\\usuario\\Desktop\\ProjetoAngular\\AngularDotnet.Repositorio\\AngularDotnet.Repositorio.csproj",
+        "projectUniqueName": "C:\\Users\\usuario\\Desktop\\ProjetoAngular\\AngularDotnet.Dominio\\AngularDotnet.Dominio.csproj",
+        "projectName": "AngularDotnet.Dominio",
+        "projectPath": "C:\\Users\\usuario\\Desktop\\ProjetoAngular\\AngularDotnet.Dominio\\AngularDotnet.Dominio.csproj",
         "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\usuario\\Desktop\\ProjetoAngular\\AngularDotnet.Repositorio\\obj\\",
+        "outputPath": "C:\\Users\\usuario\\Desktop\\ProjetoAngular\\AngularDotnet.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -48,6 +48,72 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\usuario\\Desktop\\ProjetoAngular\\AngularDotnet.Repositorio\\AngularDotnet.Repositorio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\usuario\\Desktop\\ProjetoAngular\\AngularDotnet.Repositorio\\AngularDotnet.Repositorio.csproj",
+        "projectName": "AngularDotnet.Repositorio",
+        "projectPath": "C:\\Users\\usuario\\Desktop\\ProjetoAngular\\AngularDotnet.Repositorio\\AngularDotnet.Repositorio.csproj",
+        "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\usuario\\Desktop\\ProjetoAngular\\AngularDotnet.Repositorio\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "C:\\Users\\usuario\\Desktop\\ProjetoAngular\\AngularDotnet.Dominio\\AngularDotnet.Dominio.csproj": {
+                "projectPath": "C:\\Users\\usuario\\Desktop\\ProjetoAngular\\AngularDotnet.Dominio\\AngularDotnet.Dominio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             }
           },
           "imports": [
