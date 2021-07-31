@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 import { Usuario } from "../../model/usuario";
+import { Router } from "@angular/router";
+
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
@@ -8,11 +10,14 @@ import { Usuario } from "../../model/usuario";
 export class LoginComponent {
   public usuario;
 
-  constructor() {
+  constructor(private router:Router) {
     this.usuario = new Usuario();
   }
 
   entrar() {
-    alert(this.usuario.email + " " + this.usuario.senha);
+    if (this.usuario.email == "email@teste.com" && this.usuario.senha == "abc123") {
+      localStorage.setItem("usuario-autenticado", "1");
+      this.router.navigate(['/']);
+    }
   }
 }
