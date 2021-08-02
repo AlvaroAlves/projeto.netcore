@@ -12,7 +12,7 @@ export class UsuarioServico {
     this.baseURL = baseUrl;
   }
 
-  public verificaUsuario(usuario: Usuario): Observable<Usuario> {
+  public verificarUsuario(usuario: Usuario): Observable<Usuario> {
     const headers = new HttpHeaders().set('content-type', 'application/json');
     var body = {
       email: usuario.email,
