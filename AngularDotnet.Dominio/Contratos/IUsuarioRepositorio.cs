@@ -7,6 +7,6 @@ namespace AngularDotnet.Dominio.Contratos
 {
     public interface IUsuarioRepositorio : IBaseRepositorio<Usuario>
     {
-        //Já vai herdar as assinaturas da interface mãe
+        Usuario Obter(string email, string senha);
     }
 }

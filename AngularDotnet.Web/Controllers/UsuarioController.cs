@@ -1,4 +1,5 @@
-﻿using AngularDotnet.Dominio.Entidades;
+﻿using AngularDotnet.Dominio.Contratos;
+using AngularDotnet.Dominio.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,12 @@ namespace AngularDotnet.Web.Controllers
     [Route("api/[Controller]")]
     public class UsuarioController : Controller
     {
+        private readonly IUsuarioRepositorio _usuarioRepositorio;
+        public UsuarioController(IUsuarioRepositorio usuarioRepositorio)
+        {
+            _usuarioRepositorio = usuarioRepositorio;
+        }
+
         [HttpPost]
         public IActionResult Post()
         {
@@ -28,9 +35,11 @@ namespace AngularDotnet.Web.Controllers
         {
             try
             {
-                if(usuario.Email == "email@teste.com" && usuario.Senha == "abc123")
+                var usuarioRetorno = _usuarioRepositorio.Obter(usuario.Email, usuario.Senha);
+
+                if(usuarioRetorno != null)
                 {
-                    return Ok(usuario);
+                    return Ok(usuarioRetorno);
                 }
                 return BadRequest("Usuário ou senha inválidos");
             }
