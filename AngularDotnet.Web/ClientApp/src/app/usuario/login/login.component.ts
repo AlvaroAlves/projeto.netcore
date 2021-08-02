@@ -12,9 +12,11 @@ export class LoginComponent implements OnInit {
   public returnUrl: string;
 
   constructor(private router: Router, private activatedRouter: ActivatedRoute) {
-    this.usuario = new Usuario();
-    this.returnUrl = this.activatedRouter.snapshot.queryParams['returnUrl'];
   }
+    ngOnInit(): void {
+      this.returnUrl = this.activatedRouter.snapshot.queryParams['returnUrl'];
+      this.usuario = new Usuario();
+    }
 
   entrar() {
     if (this.usuario.email == "email@teste.com" && this.usuario.senha == "abc123") {
