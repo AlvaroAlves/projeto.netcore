@@ -13,7 +13,7 @@ export class GuardaRotas implements CanActivate {
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    let autenticado = localStorage.getItem("usuario-autenticado");
+    let autenticado = sessionStorage.getItem("usuario-autenticado");
     if (autenticado == "1") {
       return true;
     }
