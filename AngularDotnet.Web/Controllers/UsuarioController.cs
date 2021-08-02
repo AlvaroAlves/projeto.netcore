@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace AngularDotnet.Web.Controllers
 {
+    [Route("api/[Controller]")]
     public class UsuarioController : Controller
     {
         [HttpPost]
