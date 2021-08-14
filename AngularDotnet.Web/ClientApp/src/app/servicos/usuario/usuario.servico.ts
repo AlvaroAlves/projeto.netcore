@@ -53,6 +53,6 @@ export class UsuarioServico {
       sobrenome: usuario.sobrenome
     }
 
-    this.http.post<Usuario>(this.baseURL + "api/usuario", body, {headers});
+    return this.http.post<Usuario>(this.baseURL + "api/usuario", body, {headers})
   }
 }
